@@ -15,11 +15,11 @@ export class ClientDetailComponent {
     this.getClientById()
 
   }
-
+  id?:string;
   getClientById(){
 
-    const id = this.route.snapshot.paramMap.get('id');
-    console.log(id);
+    this.id = this.route.snapshot.paramMap.get('id')??'';
+    
 
   }
 
